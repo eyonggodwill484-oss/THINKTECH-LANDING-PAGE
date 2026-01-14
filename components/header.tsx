@@ -1,11 +1,19 @@
 "use client"
 
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const firstMobileNavLinkRef = useRef<HTMLAnchorElement>(null)
+
+  useEffect(() => {
+    if (isOpen && firstMobileNavLinkRef.current) {
+      firstMobileNavLinkRef.current.focus()
+    }
+  }, [isOpen])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -38,16 +46,21 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+        <button
+          className="md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
+        >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border">
+        <div ref={mobileMenuRef} className="md:hidden border-t border-border">
           <div className="px-4 py-4 space-y-4">
-            <a href="#about" className="block text-foreground hover:text-primary">
+            <a ref={firstMobileNavLinkRef} href="#about" className="block text-foreground hover:text-primary">
               About
             </a>
             <a href="#services" className="block text-foreground hover:text-primary">

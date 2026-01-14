@@ -20,7 +20,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition">
+                <a href="/#" className="text-primary-foreground/80 hover:text-primary-foreground transition">
                   About Us
                 </a>
               </li>
@@ -35,7 +35,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition">
+                <a href="/#" className="text-primary-foreground/80 hover:text-primary-foreground transition">
                   Blog
                 </a>
               </li>
@@ -47,7 +47,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-4">Get In Touch</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" aria-hidden="true" />
                 <a
                   href="mailto:info@thinktech.com"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition"
@@ -56,7 +56,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5" aria-hidden="true" />
                 <a
                   href="tel:+1234567890"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition"
@@ -65,7 +65,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-1" />
+                <MapPin className="w-5 h-5 mt-1" aria-hidden="true" />
                 <span className="text-primary-foreground/80">
                   123 Tech Street
                   <br />

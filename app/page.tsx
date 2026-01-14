@@ -6,6 +6,9 @@ import CoreExpertise from "@/components/core-expertise"
 import SectorFocus from "@/components/sector-focus"
 import Methodology from "@/components/methodology"
 import Footer from "@/components/footer"
+import ValuedPartners from "@/components/valued-partners"
+import Testimonials from "@/components/testimonials"
+import ContactUs from "@/components/contact-us"
 
 export default function Home() {
   return (
@@ -14,8 +17,11 @@ export default function Home() {
       <HeroSection />
       <ValueProposition />
       <CoreExpertise />
+      <ValuedPartners />
+      <Testimonials />
       <SectorFocus />
       <Methodology />
+      <ContactUs />
       <Footer />
     </main>
   )
