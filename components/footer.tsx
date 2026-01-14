@@ -51,27 +51,25 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5" aria-hidden="true" />
                 <a
-                  href="mailto:info@thinktech.com"
+                  href="mailto:info@thinktech-academy.com"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition"
                 >
-                  info@thinktech.com
+                  info@thinktech-academy.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5" aria-hidden="true" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+237693593817"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition"
                 >
-                  +1 (234) 567-890
+                  +237 693 59 38 17
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-1" aria-hidden="true" />
                 <span className="text-primary-foreground/80">
-                  123 Tech Street
-                  <br />
-                  San Francisco, CA 94102
+                  362 Rue Boué de Lapeyrère Akwa Douala
                 </span>
               </div>
             </div>

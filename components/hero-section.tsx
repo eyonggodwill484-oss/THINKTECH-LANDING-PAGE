@@ -9,14 +9,14 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Mobile Optimized */}
+      {/* Background Image with Animation */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[3000ms] ease-in-out hover:scale-105"
         style={{
-          backgroundImage: `url('/images/hero.png')`,
+          backgroundImage: `url('/images/download (7).jpeg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'scroll', // Better mobile performance
+          backgroundAttachment: 'scroll',
         }}
       />
 

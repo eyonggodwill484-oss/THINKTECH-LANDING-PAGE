@@ -5,7 +5,7 @@ import { I18nProvider } from "./i18n-provider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
       <I18nProvider>{children}</I18nProvider>
     </ThemeProvider>
   );
