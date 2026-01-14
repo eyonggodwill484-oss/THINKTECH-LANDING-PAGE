@@ -10,38 +10,37 @@ import {
 } from "@/components/ui/carousel"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { FadeIn } from "./animations/fade-in"
-
-const testimonials = [
-  {
-    quote:
-      "ThinkTech transformed our operations with a custom ERP system. Their team's expertise and dedication were outstanding.",
-    name: "John Doe",
-    title: "CEO, Innovate Inc.",
-    avatar: "/placeholder-user.jpg",
-  },
-  {
-    quote:
-      "The change management support from ThinkTech was crucial for our team's adoption of the new software. Highly recommended.",
-    name: "Jane Smith",
-    title: "COO, Future Enterprises",
-    avatar: "/placeholder-user.jpg",
-  },
-  {
-    quote:
-      "We saw a significant improvement in efficiency after implementing the CRM built by ThinkTech. Their solutions are top-notch.",
-    name: "Peter Jones",
-    title: "Director of Sales, Growth Co.",
-    avatar: "/placeholder-user.jpg",
-  },
-]
+import { useTranslation } from "react-i18next"
 
 export default function Testimonials() {
+  const { t } = useTranslation()
+
+  const testimonials = [
+    {
+      quote: t("testimonial1_quote"),
+      name: t("testimonial1_name"),
+      title: t("testimonial1_title"),
+      avatar: "/placeholder-user.jpg",
+    },
+    {
+      quote: t("testimonial2_quote"),
+      name: t("testimonial2_name"),
+      title: t("testimonial2_title"),
+      avatar: "/placeholder-user.jpg",
+    },
+    {
+      quote: t("testimonial3_quote"),
+      name: t("testimonial3_name"),
+      title: t("testimonial3_title"),
+      avatar: "/placeholder-user.jpg",
+    },
+  ]
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
       <div className="max-w-6xl mx-auto">
         <FadeIn direction="down">
           <h2 className="text-4xl font-bold text-center text-foreground mb-16">
-            What Our <span className="text-primary">Clients Say</span>
+            {t('What Our Clients Say')}
           </h2>
         </FadeIn>
         <FadeIn direction="up">

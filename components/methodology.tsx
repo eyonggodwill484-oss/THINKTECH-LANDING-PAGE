@@ -1,28 +1,31 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
+import { useTranslation } from "react-i18next"
 
 export default function Methodology() {
+  const { t } = useTranslation()
+
   const steps = [
     {
       number: "01",
-      title: "Discovery",
-      description: "We listen to your vision and audit your current challenges.",
+      title: t("Discovery"),
+      description: t("We listen to your vision and audit your current challenges."),
     },
     {
       number: "02",
-      title: "Design",
-      description: "We architect a tailor-made solution using the best Open-Source stacks.",
+      title: t("Design"),
+      description: t("We architect a tailor-made solution using the best Open-Source stacks."),
     },
     {
       number: "03",
-      title: "Implementation",
-      description: "Agile development with transparent progress tracking.",
+      title: t("Implementation"),
+      description: t("Agile development with transparent progress tracking."),
     },
     {
       number: "04",
-      title: "Evolution",
-      description: "Continuous support and optimization to match your growth.",
+      title: t("Evolution"),
+      description: t("Continuous support and optimization to match your growth."),
     },
   ]
 
@@ -30,10 +33,10 @@ export default function Methodology() {
     <section id="methodology" className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-foreground mb-4">
-          Our <span className="text-primary">Proven Methodology</span>
+          {t('Our Proven Methodology')}
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          A structured approach to ensure successful digital transformation
+          {t('A structured approach to ensure successful digital transformation')}
         </p>
 
         <div className="grid md:grid-cols-4 gap-6">
